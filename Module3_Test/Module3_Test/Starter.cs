@@ -8,22 +8,23 @@ namespace Module3_Test
 {
     public class Starter
     {
+        private readonly IFileService _fileService;
         private SemaphoreSlim _semaphoreSlim = new SemaphoreSlim(1);
         private ILoggerService _loggerService;
 
         public Starter()
         {
             _loggerService = LocatorService.LoggerService;
+            _fileService = LocatorService.FileService;
         }
 
         public void Run()
         {
-            File.WriteAllText("test.txt", "aaaaaaaaaa");
+            _loggerService.LogBackupHandler += CreateBackUp;
 
-            // На события Logger’a подписан класс Starter
             Task.Run(async () =>
             {
-                for (int i = 0; i < 50; i++)
+                for (int i = 0; i < 51; i++)
                 {
                     await WriteAsync($"Log number {i}");
                 }
@@ -31,7 +32,7 @@ namespace Module3_Test
 
             Task.Run(async () =>
             {
-                for (int i = 51; i < 100; i++)
+                for (int i = 51; i < 101; i++)
                 {
                     await WriteAsync($"Log number {i}");
                 }
@@ -44,12 +45,17 @@ namespace Module3_Test
         {
             await _semaphoreSlim.WaitAsync();
 
-            // await _streamWriter.WriteLineAsync(text);
-            _loggerService.CreateLog(text);
-
-            Console.WriteLine(text);
+            await Task.Run(() =>
+            {
+                _loggerService.CreateLog(text);
+            });
 
             _semaphoreSlim.Release();
+        }
+
+        private void CreateBackUp(string filePath, string logs)
+        {
+            _fileService.WriteToFile(filePath, logs);
         }
     }
 }

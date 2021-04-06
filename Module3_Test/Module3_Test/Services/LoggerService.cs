@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using Module3_Test.Configs;
 using Module3_Test.Services.Abstractions;
 
@@ -8,7 +9,6 @@ namespace Module3_Test.Services
 {
     public class LoggerService : ILoggerService
     {
-        private readonly IFileService _fileService;
         private readonly LoggerConfig _loggerConfig;
         private readonly StringBuilder _generalLog = new StringBuilder();
         private int _logCounter = 0;
@@ -19,11 +19,11 @@ namespace Module3_Test.Services
 
         public LoggerService()
         {
-            _fileService = LocatorService.FileService;
-
             var config = LocatorService.ConfigService;
             _loggerConfig = config.LoggerConfig;
         }
+
+        public event Action<string, string> LogBackupHandler;
 
         public void CreateLog(string message)
         {
@@ -35,23 +35,20 @@ namespace Module3_Test.Services
 
             if (_logCounter == _loggerConfig.BackUpCount)
             {
-                Console.WriteLine(_logCounter);
-                CreateBackUp();
+                HandleBackup();
 
                 _logCounter = 0;
             }
         }
 
-        private void CreateBackUp()
+        public void HandleBackup()
         {
-            Console.WriteLine("CreateBackUp");
-
             var dirPath = _loggerConfig.DirectoryPath;
 
             var fileName = $"{DateTime.UtcNow.ToString(_loggerConfig.NameFormat)}";
             var filePath = $"{dirPath}{fileName}{_loggerConfig.ExtensionFile}";
 
-            _fileService.WriteToFile(filePath, _generalLog.ToString());
+            LogBackupHandler.Invoke(filePath, _generalLog.ToString());
         }
     }
 }
