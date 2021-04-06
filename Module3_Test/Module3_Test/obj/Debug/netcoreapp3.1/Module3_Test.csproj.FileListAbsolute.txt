@@ -1,0 +1,16 @@
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.csprojAssemblyReference.cache
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.AssemblyInfoInputs.cache
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.AssemblyInfo.cs
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.csproj.CoreCompileInputs.cache
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\Module3_Test.exe
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\config.json
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\Module3_Test.deps.json
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\Module3_Test.runtimeconfig.json
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\Module3_Test.runtimeconfig.dev.json
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\Module3_Test.dll
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\Module3_Test.pdb
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.csproj.CopyComplete
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.dll
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.pdb
+C:\Users\Vira\learning\C# .NET\module3_Test\Module3_Test\Module3_Test\obj\Debug\netcoreapp3.1\Module3_Test.genruntimeconfig.cache
