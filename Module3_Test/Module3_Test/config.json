@@ -1,0 +1,8 @@
+﻿{
+  "Logger": {
+    "DirectoryPath": "../../../Logs/",
+    "ExtensionFile": ".txt",
+    "NameFormat": "hh.mm.ss.fff dd.MM.yyyy",
+    "BackUpCount": 10
+  }
+}
